@@ -9,3 +9,5 @@ pk.loc[(pk['Type 1']=='Grass') | (pk['Type 2']=='Ice') & (pk["HP"] >70 ) ]
 pk.loc[pk['Name'].str.contains('Mega')] # it print all the name of pokemon who contain mega name.
 
 pk.loc[~pk['Name'].str.contains('Mega')] # it will print all the name of pokemon which not contain mega name
+
+pk.loc[pk['Type 1'] == 'Fire','Type 1'] = 'Flamer' # it will change all the Type 1 columb which has fire name trun them into Flammer
